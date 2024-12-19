@@ -18,8 +18,7 @@ const initialStartServer = () => {
 };
 
 // Connection URL
-const mongoURI =
-  "mongodb+srv://raja:%40raja934467@cluster0.ulkc4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const mongoURI = 'your mongodb url'
 
 // Database name
 const dbName = "myDatabase";
