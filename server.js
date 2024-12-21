@@ -19,7 +19,7 @@ const initialStartServer = () => {
 
 // Connection URL
 const mongoURI =
-  "mongodb+srv://raja:%40raja934467@cluster0.ulkc4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+  "mongodb+srv://raja:<password>@cluster0.ulkc4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 // Database name
 const dbName = "myDatabase";
