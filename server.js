@@ -61,19 +61,21 @@ app.get("/get-data", async (request, response) => {
 
 // Route to handle adding passwords
 app.post("/add-password", async (req, res) => {
+  const { siteName, password } = req.body;
+
   try {
     if (!passwordsCollection) {
       console.error("Database is not initialized. Call connectDB() first.");
       return;
     }
 
-    console.log(req.body); // This should now log the body sent from the frontend
+    console.log(siteName, password); // This should now log the body sent from the frontend
 
     // Uncomment to insert into the database
-    // await passwordsCollection.insertOne({
-    //   siteName: req.body.siteName,
-    //   password: req.body.password,
-    // });
+    await passwordsCollection.insertOne({
+      siteName,
+      password,
+    });
 
     res.json("Password saved successfully");
   } catch (err) {
